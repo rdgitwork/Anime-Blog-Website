@@ -3,6 +3,7 @@ const app = express();
 
 app.use(express.static('public'));  // Added to start the index.html for as a main page
 
+
 app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });

@@ -6,12 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Node App</title>
     <link rel="stylesheet" href="./css/output.css">
+    <style>
+        /* Styles to make the video fill the entire background */
+        
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .video-background {
+            position: fixed;
+            /* Fixed position to cover all the area */
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            /* Put the video behind other elements */
+            background-size: cover;
+        }
+        
+        nav {
+            z-index: 10;
+            /* Ensures the nav is above the video */
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-4xl text-blue-500">Hello from Tailwind CSS!</h1>
-    <script src="js/main.js"></script>
-    <!-- Navigation Bar -->
+    <video playsinline autoplay muted loop class="video-background">
+        <source src="source/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <nav class="bg-red-500 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-white text-lg font-bold">
@@ -26,6 +56,7 @@
         </div>
     </nav>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>

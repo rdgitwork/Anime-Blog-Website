@@ -58,13 +58,19 @@
         
         .slide-in {
             position: absolute;
-            left: 10px;
+            left: 30px;
             /* Set your desired position */
-            top: 100px;
+            bottom: 100px;
             /* Set your desired position */
             animation: 1s ease-out 0s 1 slideInFromLeft;
             z-index: 5;
             /* Above the background but below the nav */
+            width: 80%;
+            /* Smaller size, adjust as needed */
+            max-width: 500px;
+            /* Maximum width to ensure it does not get too large */
+            height: auto;
+            /* Maintain aspect ratio */
         }
     </style>
 </head>
@@ -84,7 +90,7 @@
         </div>
     </nav>
 
-    <img src="source/naruto-37629.png" alt="Descriptive Text" class="slide-in">
+    <img src="source/naruto-37629.png" alt="Naruto Image" class="slide-in">
 
     <script src="js/main.js"></script>
 </body>

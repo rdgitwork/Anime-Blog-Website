@@ -15,7 +15,6 @@
             margin: 0;
             padding: 0;
             background: url('source/back.jpg') no-repeat center center fixed;
-            /* Set your background image, replace 'path/to/your/background-image.jpg' */
             background-size: cover;
             overflow: hidden;
             /* Prevents scrolling */
@@ -31,7 +30,6 @@
             background-color: rgba(255, 255, 255, 0.281);
             /* Light transparent layer */
             z-index: 1;
-            /* Ensure it's above the background, below the content */
         }
         
         nav {
@@ -40,18 +38,27 @@
             height: 64px;
             background-color: #000000;
             position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .nav-logo {
+            height: 50px;
+            /* Adjust size as necessary */
         }
         
         .flex.space-x-4 a {
-            color: #D10012;
+            color: #ece7e7;
             /* Newly determined text color */
             font-bold: bold;
             text-decoration: none;
-            /* Optional: removes underline */
+            /* Removes underline */
         }
         
         .flex.space-x-4 a:hover {
-            color: #8B0000;
+            color: #d60e0e;
             /* Dark red on hover */
         }
         
@@ -80,16 +87,12 @@
 
 <body>
     <nav class="p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-white text-lg font-bold">
-                My Website
-            </div>
-            <div class="flex space-x-4">
-                <a href="#" class="text-white font-bold hover:text-gray-200">Home</a>
-                <a href="#" class="text-white font-bold hover:text-gray-200">About</a>
-                <a href="#" class="text-white font-bold hover:text-gray-200">Services</a>
-                <a href="#" class="text-white font-bold hover:text-gray-200">Contact</a>
-            </div>
+        <img src="source/icon.jpg" alt="Website Logo" class="nav-logo">
+        <div class="flex space-x-4">
+            <a href="#" class="text-white font-bold hover:text-gray-200">Home</a>
+            <a href="#" class="text-white font-bold hover:text-gray-200">About</a>
+            <a href="#" class="text-white font-bold hover:text-gray-200">Services</a>
+            <a href="#" class="text-white font-bold hover:text-gray-200">Contact</a>
         </div>
     </nav>
 

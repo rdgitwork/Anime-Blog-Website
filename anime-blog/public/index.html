@@ -7,42 +7,31 @@
     <title>My Node App</title>
     <link rel="stylesheet" href="./css/output.css">
     <style>
-        /* Styles to make the video fill the entire background */
+        /* Styles to set the background color */
         
         body,
         html {
             height: 100%;
             margin: 0;
-        }
-        
-        .video-background {
-            position: fixed;
-            /* Fixed position to cover all the area */
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            /* Put the video behind other elements */
-            background-size: cover;
+            background-color: #CC9900;
+            /* Dark yellow golden background color */
         }
         
         nav {
             z-index: 10;
-            /* Ensures the nav is above the video */
+            /* Ensures the nav is above other content */
+            width: 100%;
+            /* Full width */
+            height: 64px;
+            /* Set a fixed height for the nav */
+            background-color: #1F51FF;
+            /* Background color specified previously */
         }
     </style>
 </head>
 
 <body>
-    <video playsinline autoplay muted loop class="video-background">
-        <source src="source/video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <nav class="bg-red-500 p-4">
+    <nav class="p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-white text-lg font-bold">
                 My Website
